@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Stop Motion Animation</title>
+    <style>
+        :root {
+            --dark-cyan: #008b8b;
+            --deep-bg: #050a0a;
+            --card-bg: #0d1a1a;
+            --text-color: #e0f2f2;
+            --accent: #00ffff;
+            --border: rgba(0, 139, 139, 0.4);
+        }
+
+        /* SECURITY: Disable Text Selection */
+        * {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--deep-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* SVG Icons */
+        .header-icon { width: 60px; height: 60px; fill: var(--accent); margin-bottom: 10px; }
+        .h2-icon { width: 28px; height: 28px; fill: var(--dark-cyan); margin-right: 12px; vertical-align: middle; flex-shrink: 0; }
+
+        header {
+            text-align: center;
+            padding: 80px 0 40px 0;
+            border-bottom: 2px solid var(--dark-cyan);
+        }
+
+        h1 { 
+            font-size: clamp(1.8rem, 5vw, 3rem); 
+            color: var(--accent); 
+            margin: 0; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+        }
+
+        h2 { 
+            font-size: clamp(1.4rem, 4vw, 2rem); 
+            color: var(--dark-cyan); 
+            display: flex; 
+            align-items: center; 
+            margin-top: 50px; 
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            padding: clamp(15px, 3vw, 30px);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+
+        ul { list-style: none; padding: 0; }
+        ul li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        ul li::before { content: "→"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
+
+        .takeaway {
+            background: linear-gradient(90deg, var(--dark-cyan), #004d4d);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Responsive Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid var(--dark-cyan);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--dark-cyan); color: white; text-transform: uppercase; font-size: 0.8rem; }
+
+        strong { color: var(--accent); }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .container { width: 95%; }
+            h2 { border-left: 3px solid var(--accent); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+<div class="container">
+    <header>
+        <svg class="header-icon" viewBox="0 0 24 24"><path d="M18,4l2,4h-3l-2-4h-2l2,4h-3l-2-4H8l2,4H7L5,4H4A2,2,0,0,0,2,6V18a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V4Z"/></svg>
+        <h1>Introduction to Stop Motion Animation</h1>
+    </header>
+
+    <section>
+        <h2>
+            <svg class="h2-icon" viewBox="0 0 24 24"><path d="M12,2l2.4,7.2h7.6l-6,4.8,2.4,7.2-6-4.8-6,4.8,2.4-7.2-6-4.8h7.6z"/></svg>
+            What It Is
+        </h2>
+        <div class="content-box">
+            <p>Stop motion animation is a filmmaking technique where everyday objects, toys, clay figures, or puppets are moved in tiny steps and photographed one frame at a time. When those photos are played quickly in sequence, the objects look like they’re moving on their own.</p>
+            <p>It’s like bringing your toys to life — frame by frame.</p>
+        </div>
+
+        <hr>
+
+        <h2>
+            <svg class="h2-icon" viewBox="0 0 24 24"><path d="M14,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V8Zm4,18H6V4h7V9h5Z"/></svg>
+            Why It’s Special
+        </h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Oldest form of animation</strong>: It began in the late 1800s, even before cartoons.</li>
+                <li><strong>Handmade magic</strong>: Unlike computer animation, stop motion feels tactile and real because you’re working with physical objects.</li>
+                <li><strong>Unique style</strong>: The slight imperfections give it warmth and charm that audiences love.</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            <svg class="h2-icon" viewBox="0 0 24 24"><path d="M22,12L18,8V11H3V13H18V16L22,12Z"/></svg>
+            How It Works
+        </h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>1. Set up your camera</strong> (phone or DSLR) on a tripod.</li>
+                <li><strong>2. Place your object</strong> (toy, clay figure, paper cutout).</li>
+                <li><strong>3. Move it slightly</strong> → take a photo → repeat.</li>
+                <li><strong>4. Play back the photos quickly</strong> to see smooth motion.</li>
+                <li><strong>5. Add sound, music, or dialogue</strong> to complete the story.</li>
+            </ul>
+        </div>
+
+        <h2>
+            <svg class="h2-icon" viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+            Famous Examples
+        </h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Tim Burton & Henry Selick:</strong> – The Nightmare Before Christmas* (1993) brought gothic artistry and mainstream success.</li>
+                <li><strong>Laika Studios:</strong> – Films like Coraline (2009), Kubo and the Two Strings (2016), and Missing Link (2019) pushed technical boundaries with 3D printing and hybrid digital workflows.</li>
+                <li><strong>Experimental Films:</strong> – Artists explored cutout animation and pixilation, expanding the medium’s artistic range.</li>
+            </ul>
+        </div>
+
+        <div class="takeaway">
+            <svg class="h2-icon" style="fill:white;" viewBox="0 0 24 24"><path d="M7,2v11h3v9l7-12h-4l4-8Z"/></svg>
+            <span><strong>Key Takeaway:</strong> Stop motion animation is the art of making still objects move. It’s simple enough for beginners with toys and a phone, yet powerful enough to create award-winning films.</span>
+        </div>
+    </section>
+
+    <section>
+        <h1 style="border-top: 1px solid var(--dark-cyan); padding-top: 40px;">History</h1>
+        <p style="font-size: 1.1rem;"><strong>Stop motion animation is one of the oldest and most magical forms of filmmaking, dating back to the late 1800s. It began with early experiments by pioneers like George Méliès and J. Stuart Blackton, and over time grew into a professional art form used in classics like King Kong (1933), Wallace & Gromit, and modern films by Laika Studios.</strong></p>
+
+        <h2><svg class="h2-icon" viewBox="0 0 24 24"><path d="M13,3V9H19V3H13M11,3V9H5V3H11M13,11V17H19V11H13M11,11V17H5V11H11Z"/></svg>Early Origins (1890s–1910s)</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>1896 – George Méliès</strong>: Accidentally discovered stop motion when his camera jammed.</li>
+                <li><strong>1898 – Humpty Dumpty Circus</strong>: Considered one of the first true stop motion films.</li>
+                <li><strong>1902 – A Trip to the Moon</strong>: Used stop motion effects for fantastical storytelling.</li>
+            </ul>
+        </div>
+
+        <h2><svg class="h2-icon" viewBox="0 0 24 24"><path d="M22,11a1,1,0,0,0-1-1H19.58l-1.35-2.7a1,1,0,0,0-.89-.55H14.66a1,1,0,0,0-.89.55L12.42,10H11a1,1,0,0,0-1,1v1a1,1,0,0,0,1,1h.5v4H10v-1a1,1,0,0,0-2,0v1H7v-4H6a1,1,0,0,0-1-1v-1a1,1,0,0,0,1-1h.58l1.35-2.7h.89l1.35,2.7H16Z"/></svg>Golden Age & Styles</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Willis O’Brien:</strong>: Created <em>The Lost World</em> and <em>King Kong</em>.</li>
+                <li><strong>Ray Harryhausen</strong>: Legendary skeleton fight in <em>Jason and the Argonauts</em>.</li>
+                <li><strong>Claymation</strong>: Popularized by Will Vinton.</li>
+                <li><strong>TV Specials</strong>: Rankin/Bass (<em>Rudolph the Red-Nosed Reindeer</em>).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h1>How to Create Stop Motion Animation (Beginner → Professional)</h1>
+        
+        <h2><svg class="h2-icon" style="fill:#00ff00" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>Starter Level (Fun & Easy)</h2>
+        <div class="content-box">
+            <p><strong>Goal:</strong> Make short clips.</p>
+            <ul>
+                <h4>Tools</h4>
+                <li>Phone camera, free apps (Stop Motion Studio, iMotion)</li>
+                <h4>Props</h4>
+                <li>Toys, clay figures, paper cutouts, or even snacks.</li>
+                <h4>Steps</h4>
+                <li>Place your phone on a stand/tripod. </li>
+                <li>Move your object a tiny bit → snap a photo → repeat. </li>
+                <li>Play back the photos quickly (12–24 frames per second). </li>
+                <li>Add sound/music in the app. </li>
+                <h4>Goal:</h4>
+                <li>Make short clips (10–30 seconds) to practice patience and timing.</li>
+            </ul>
+        </div>
+
+        <h2><svg class="h2-icon" style="fill:#ffe600" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>Intermediate Level (Learning Tricks)</h2>
+        <div class="content-box">
+            <p><strong>Goal:</strong> Create short stories.</p>
+            <ul>
+                <h4>Tools</h4>
+                <li>DSLR or mirrorless camera, tripod, desk lamps for lighting.</li>
+                <h4>Software</h4>
+                <li>Paid apps or editors like Stop Motion Studio Pro, Premiere Rush</li>
+                <h4>Techniques</h4>
+                <li>Onion Skinning: See the last frame as a ghost image to align movements. </li>
+                <li>Rigging: Use wires or supports to animate jumps or flying objects. </li>
+                <li>Sets: Build small backgrounds with cardboard, Lego, or clay. </li>
+                <h4>Goal:</h4>
+                <li>Create short stories (30–60 seconds) with characters, emotions, and simple plots.</li>
+            </ul>
+        </div>
+
+        <h2><svg class="h2-icon" style="fill:#ff0000" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>Professional Level (Industry Standard)</h2>
+        <div class="content-box">
+            <p><strong>Goal:</strong> Make Films.</p>
+            <ul>
+               <h4>Tools</h4>
+                <li>High-end DSLR, motion-control rigs, professional lighting.</li>
+                <h4>Software</h4>
+                <li>Dragonframe (used in films like Coraline and Kubo)</li>
+                <h4>Techniques</h4>
+                <li>Build puppets with wire armatures for smooth articulation.  </li>
+                <li>Use multiple cameras for complex shots. </li>
+                <li>Add sound design, voice acting, and polish in Premiere or DaVinci Resolve </li>
+                <h4>Goal:</h4>
+                <li>Produce polished shorts or even festival-ready films.</li>
+            </ul>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Tools</th>
+                        <th>Software</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Starter</td><td>Phone + Toys</td><td>Stop Motion Studio</td><td>Fun Clips</td></tr>
+                    <tr><td>Intermediate</td><td>DSLR + Sets</td><td>Stop Motion Studio Pro</td><td>Short Stories</td></tr>
+                    <tr><td>Professional</td><td>DSLR + Rigs</td><td>Dragonframe</td><td>Films</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Equinox Studio | Security Protected Content | Made by Equinox pixale (ceo)</p>
+    </footer>
+</div>
+
+<script>
+    // SECURITY: Disable Right Click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // SECURITY: Disable F12 and Ctrl+Shift+I/C/J and Ctrl+U
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) return false; // F12
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) return false;
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // View Source
+    };
+
+    // SECURITY: Anti-Debugging Loop
+    setInterval(function(){
+        debugger;
+    }, 100);
+</script>
+
+</body>
+</html>
